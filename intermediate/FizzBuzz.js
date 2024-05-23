@@ -1,14 +1,23 @@
 var array = [];
+var count = 1;
 
 function FizzBuzz() {
 
-    if(array.length == 0){
-        array.push(1);
-    }else{
-        var num = array[array.length - 1];
-        array.push(num+1);
-    }
+    while(count <= 100){
+        
+        if(count % 3 == 0 && count % 5 == 0){
+            array.push("FizzBuzz");
+        }else if(count % 5 == 0){
+            array.push("Buzz");
+        }else if(count % 3 == 0){
+            array.push("Fizz");
+        }else{
+            array.push(count);
+        }
 
+        count++;
+        
+    }
     console.log(array);
     
 }
